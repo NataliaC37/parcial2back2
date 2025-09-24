@@ -24,3 +24,4 @@ public interface ISalaRepositorio extends JpaRepository<Sala,Integer> {
     List<Sala>findByCorreoStartingWith(String correo);
 
 }
+
