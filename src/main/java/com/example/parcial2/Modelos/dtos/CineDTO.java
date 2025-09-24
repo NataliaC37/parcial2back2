@@ -1,28 +1,14 @@
-package com.example.parcial2.Modelos;
+package com.example.parcial2.Modelos.dtos;
 
-import jakarta.persistence.*;
-import java.util.List;
-
-@Entity
-public class Cine {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CineDTO {
     private Integer id;
-
     private String nombre;
     private String nit;
 
-    @OneToOne(mappedBy = "cine", cascade = CascadeType.ALL)
-    private DetalleCine detalle;
+    public CineDTO() {}
 
-    @OneToMany(mappedBy = "cine", cascade = CascadeType.ALL)
-    private List<Sala> salas;
-
-    // Constructores
-    public Cine() {}
-
-    public Cine(String nombre, String nit) {
+    public CineDTO(Integer id, String nombre, String nit) {
+        this.id = id;
         this.nombre = nombre;
         this.nit = nit;
     }
