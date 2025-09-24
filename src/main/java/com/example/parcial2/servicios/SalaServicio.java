@@ -11,12 +11,9 @@ public class SalaServicio {
     @Autowired
     private ISalaRepositorio repositorio;
 
-    public Sala guardarSala(Sala sala) throws Exception {
-        try {
-            return repositorio.save(sala);
-        } catch (Exception e) {
-            throw new Exception("Error guardando sala: " + e.getMessage());
-        }
+    public Sala guardarSala(Sala sala) {
+        return repositorio.save(sala);
     }
 }
+
 

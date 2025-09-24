@@ -11,12 +11,8 @@ public class DetalleCineServicio {
     @Autowired
     private IDetalleCineRepositorio repositorio;
 
-    public DetalleCine guardarDetalleCine(DetalleCine detalle) throws Exception {
-        try {
-            return repositorio.save(detalle);
-        } catch (Exception e) {
-            throw new Exception("Error guardando detalle de cine: " + e.getMessage());
-        }
+    public DetalleCine guardarDetalleCine(DetalleCine detalle) {
+        return repositorio.save(detalle);
     }
 }
 
